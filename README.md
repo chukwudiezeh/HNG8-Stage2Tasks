@@ -2,7 +2,7 @@
 My submission for the HNG8 Internship Stage2 tasks (Backend)
 
 ## Name Task
-- Repo link>>> [https://github.com/chukwudiezeh/HNG8-Stage2Tasks/name_task](https://github.com/chukwudiezeh/HNG8-Stage2Tasks/name_task)
+- Repo link>>> [https://github.com/chukwudiezeh/HNG8-Stage2Tasks/tree/main/name_task](https://github.com/chukwudiezeh/HNG8-Stage2Tasks/tree/main/name_task)
 - Live link>>> [https://hng8-stage2-interactive-resume.herokuapp.com/name_task](https://hng8-stage2-interactive-resume.herokuapp.com/name_task)
 
 ## Interactive Resume Task
