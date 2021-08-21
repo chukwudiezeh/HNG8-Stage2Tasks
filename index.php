@@ -27,7 +27,7 @@ if (isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/Resumestyle.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>MY RESUME</title>
 </head>
@@ -170,18 +170,7 @@ if (isset($_POST['submit'])){
             <form method="post">
                 <h3>Drop me a Message</h3>
 
-                <?php 
-                if (isset($_SESSION['success'])){
-                    ?>
-                    <div class="alert alert-success"><?= $_SESSION['success'] ?></div>
-                    <?php
-                }else if(isset($_SESSION['error'])){ 
-                    ?>
-                    <div class="alert alert-danger"><?= $_SESSION['error'] ?></div>
-                    <?php
-                }
-                ?>
-                <div class="alert alert-su"></div>
+                
                <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
