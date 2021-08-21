@@ -1,21 +1,15 @@
 <?php
 session_start();
 
-if (isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $message = $_POST['message'];
 
-    $to = "xclusivelyrics@gmail.com";
-    $subject = "Enquires";
-    $headers = "From:".$email;
+    $_SESSION['success'] = "message Sent Successfully";
 
-    if (mail($to,$subject,$message,$headers)){
-        $_SESSION['success'] = "Message sent successfully";
-    }else{
-        $_SESSION['error'] = "Message could not be sent";
-    }
+    header("location:https://hng8-stage2-interactive-resume.herokuapp.com/#contact-form");
 }
 ?>
 
@@ -29,6 +23,8 @@ if (isset($_POST['submit'])){
     <link rel="stylesheet" href="./styles/Resumestyle.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <title>MY RESUME</title>
 </head>
 
@@ -164,45 +160,45 @@ if (isset($_POST['submit'])){
         </div>
     </div>
     <div class="container contact-form" id="contact-form">
-            <div class="contact-image">
-                <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
-            </div>
-            <form method="post">
-                <h3>Drop me a Message</h3>
-                <?php 
-                if (isset($_SESSION['success'])){
-                    ?>
-                    <div class="alert alert-success"><?= $_SESSION['success'] ?></div>
-                    <?php
-                }else if(isset($_SESSION['error'])){ 
-                    ?>
-                    <div class="alert alert-danger"><?= $_SESSION['error'] ?></div>
-                    <?php
-                }
-                ?>
-               <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name *" value=""  required/>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="email" class="form-control" placeholder="Your Email *" value="" required/>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *" value="" required />
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="submit" class="btnContact" value="Send Message" />
-                        </div>
+        <div class="contact-image">
+            <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
+        </div>
+        <form method="post">
+            <h3>Drop me a Message</h3>
+            <?php
+            if (isset($_SESSION['success'])) {
+            ?>
+                <div class="alert alert-success"><?= $_SESSION['success'] ?></div>
+            <?php
+            } else if (isset($_SESSION['error'])) {
+            ?>
+                <div class="alert alert-danger"><?= $_SESSION['error'] ?></div>
+            <?php
+            }
+            ?>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name *" value="" required />
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;" required></textarea>
-                        </div>
+                    <div class="form-group">
+                        <input type="text" name="email" class="form-control" placeholder="Your Email *" value="" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *" value="" required />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" name="submit" class="btnContact">Send Message</button>
                     </div>
                 </div>
-            </form>
-</div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;" required></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
