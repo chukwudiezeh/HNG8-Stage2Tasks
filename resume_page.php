@@ -31,7 +31,7 @@ $strengths = explode(".", $_SESSION['strengths']);
                 </a>
             </div>
             <ul>
-                <li><a href="http://localhost/plain-php-projects/Interactive_resume_page_task/index.php">Back to Home</a></li>
+                <li><a href="https://hng8-stage2-interactive-resume.herokuapp.com/index.php">Back to Home</a></li>
             </ul>
         </nav>
     </div>
