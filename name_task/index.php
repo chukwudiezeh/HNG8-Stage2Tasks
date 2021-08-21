@@ -5,7 +5,7 @@ $email = "cezeh96@gmail.com";
 $username = "@ZionBoi";
 $track = "Backend";
 $stage = "Stage 2";
-$repo_link = "https://github.com/chukwudiezeh/HNG8-Stage2Tasks/name_task/";
+$repo_link = "https://github.com/chukwudiezeh/HNG8-Stage2Tasks/tree/main/name_task";
 ?>
 
 
