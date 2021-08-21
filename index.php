@@ -182,10 +182,10 @@ if (isset($_POST['submit'])) {
                         <input type="text" name="name" class="form-control" placeholder="Your Name *" value="" required />
                     </div>
                     <div class="form-group">
-                        <input type="text" name="email" class="form-control" placeholder="Your Email *" value="" required />
+                        <input type="email" name="email" class="form-control" placeholder="Your Email *" value="" required />
                     </div>
                     <div class="form-group">
-                        <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *" value="" required />
+                        <input type="number" name="phone" class="form-control" placeholder="Your Phone Number *" value="" required />
                     </div>
                     <div class="form-group">
                         <button type="submit" name="submit" class="btnContact">Send Message</button>
