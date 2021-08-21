@@ -169,8 +169,17 @@ if (isset($_POST['submit'])){
             </div>
             <form method="post">
                 <h3>Drop me a Message</h3>
-
-                
+                <?php 
+                if (isset($_SESSION['success'])){
+                    ?>
+                    <div class="alert alert-success"><?= $_SESSION['success'] ?></div>
+                    <?php
+                }else if(isset($_SESSION['error'])){ 
+                    ?>
+                    <div class="alert alert-danger"><?= $_SESSION['error'] ?></div>
+                    <?php
+                }
+                ?>
                <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
